@@ -3,7 +3,7 @@
 
 int my_printf(char *format_string, char *param){
 	for(int i=0;i<strlen(format_string);i++){
-		if((format_string[i] == '#') && (format_string[i+1] == '.') && (format_string[i+2] == 'X') && (format_string[i+3] == 'k')){
+		if((format_string[i] == '#') && (format_string[i+1] == '.') && (isdigit(format_string[i+2]) != 0) && (format_string[i+3] == 'k')){
 			i = i + 3;
 			printf("%s",param);
 			
