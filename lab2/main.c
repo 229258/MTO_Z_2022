@@ -3,8 +3,8 @@
 
 int my_printf(char *format_string, char *param){
 	for(int i=0;i<strlen(format_string);i++){
-		if((format_string[i] == '#') && (format_string[i+1] == 'k')){
-			i++;
+		if((format_string[i] == '#') && (format_string[i+1] == '.') && (format_string[i+2] == 'X') && (format_string[i+3] == 'k')){
+			i = i + 3;
 			printf("%s",param);
 			
 			for (int j = 0; j < strlen(format_string); j++) {
@@ -12,6 +12,7 @@ int my_printf(char *format_string, char *param){
 					format_string[j] += 32;
 				else if ((format_string[j] >= 'a') && (format_string[j] <= 'z'))
 					format_string[j] -= 32;
+
 			}
 		}else
 			putchar(format_string[i]);
