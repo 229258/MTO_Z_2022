@@ -6,6 +6,13 @@ int my_printf(char *format_string, char *param){
 		if((format_string[i] == '#') && (format_string[i+1] == 'k')){
 			i++;
 			printf("%s",param);
+			
+			for (int j = 0; j < strlen(format_string); j++) {
+				if ((format_string[j] >= 'A') && (format_string[j] <= 'Z'))
+					format_string[j] += 32;
+				else if ((format_string[j] >= 'a') && (format_string[j] <= 'z'))
+					format_string[j] -= 32;
+			}
 		}else
 			putchar(format_string[i]);
 	}
