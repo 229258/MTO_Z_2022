@@ -18,24 +18,27 @@ int my_printf(char *format_string, char *param){
 					format_string[j] -= 32;
 
 			}
-		
+					
 			
 		}else if((format_string[i] == '#') && (format_string[i+1] == '.')) {
 			if ((isdigit(format_string[i+2]) != 0) && (format_string[i+3] == 'k')) {
 				
-
-		
-			
+				// terminator required because of protection for segmentation fault
+				char value_with_terminator[2] = {format_string[i + 2], '\0'};
+				int number_of_characters = atoi(value_with_terminator);
+							
 				i = i + 3;
 				printf("%s",param);
 				
-				for (int j = 0; j < strlen(format_string); j++) {
+				int j = 0;
+				for (j = 0; j < strlen(format_string); j++) {
 					if ((format_string[j] >= 'A') && (format_string[j] <= 'Z'))
 						format_string[j] += 32;
 					else if ((format_string[j] >= 'a') && (format_string[j] <= 'z'))
 						format_string[j] -= 32;
 
 				}
+				//format_string[j] = '\n';
 			}
 		}else
 			putchar(format_string[i]);
