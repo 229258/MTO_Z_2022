@@ -1,6 +1,6 @@
 totafsdfsf #.1k fdsfsdf
 test
-totafsd#.2k fdsfsdf fdfjs
+totafsd#k fdsfsdf fdfjs
 test2
 jfldjfldk # wynik
 test3
@@ -16,5 +16,5 @@ fjdlsjfkl #.8k oooolll
 test8
 rwrewrew #.9k fjdslkjfdl
 test9
-fjdlskjfldjflj #.1k rewrewrew
+fjdlskjfldjflj #k rewrewrew
 test10
