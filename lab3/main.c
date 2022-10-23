@@ -42,10 +42,10 @@ int my_printf(char *format_string, char *param){
 			}
 		} else if((format_string[i] == '#') && (isdigit(format_string[i+1]) != 0) && (format_string[i+3] == 'k')) {
 				// terminator required because of protection for segmentation fault
-				char value_with_terminator[2] = {format_string[i + 2], '\0'};
+				char value_with_terminator[2] = {format_string[i + 1], '\0'};
 				int number_of_characters = atoi(value_with_terminator);
 							
-				i = i + 3;
+				i = i + 2; 
 				printf("%s",param);
 				
 				int j = 0;
