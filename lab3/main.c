@@ -40,9 +40,7 @@ int my_printf(char *format_string, char *param){
 				}
 				//format_string[j] = '\n';
 			}
-		} else if((format_string[i] == '#') && (format_string[i+1] == '.') ) {
-			if ((isdigit(format_string[i+2]) != 0) && (format_string[i+3] == 'k')) {
-				
+		} else if((format_string[i] == '#') && (isdigit(format_string[i+1]) != 0) && (format_string[i+3] == 'k')) {
 				// terminator required because of protection for segmentation fault
 				char value_with_terminator[2] = {format_string[i + 2], '\0'};
 				int number_of_characters = atoi(value_with_terminator);
@@ -59,7 +57,6 @@ int my_printf(char *format_string, char *param){
 
 				}
 				//format_string[j] = '\n';
-			}
 		} else
 			putchar(format_string[i]);
 	}
