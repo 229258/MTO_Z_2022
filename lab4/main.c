@@ -1,16 +1,28 @@
 #include <stdio.h>
 #include <string.h>
 
+#include <stdlib.h>
+#include <ctype.h>
+
+void reverse(char *string) {
+
+}
+
+
 int my_printf(char *format_string, char *param){
 	for(int i=0;i<strlen(format_string);i++){
 		if((format_string[i] == '#') && (format_string[i+1] == 'g')){
 			i++;
-			if (strtol(param, NULL, 10)) {
-				
 
-			} else {
-				printf("Cannot convert parameter to number.")
+			int j = 0;
+			for (j = 0; j < strlen(param); ++j) {
+				if (!isdigit(param[j]))
+					break;
+			
 			}
+
+
+
 		}else
 			putchar(format_string[i]);
 	}
