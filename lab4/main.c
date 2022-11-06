@@ -3,9 +3,14 @@
 
 int my_printf(char *format_string, char *param){
 	for(int i=0;i<strlen(format_string);i++){
-		if((format_string[i] == '#') && (format_string[i+1] == 'k')){
+		if((format_string[i] == '#') && (format_string[i+1] == 'g')){
 			i++;
-			printf("%s",param);
+			if (strtol(param, NULL, 10)) {
+				
+
+			} else {
+				printf("Cannot convert parameter to number.")
+			}
 		}else
 			putchar(format_string[i]);
 	}
