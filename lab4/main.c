@@ -5,7 +5,14 @@
 #include <ctype.h>
 
 void reverse(char *string) {
+	int string_length = strlen(string);
 
+	for (int i = 0; i < string_length / 2; ++i) {
+		char temp = string[i];
+		string[i] = string[string_length - i];
+		string[string_length - i] = temp;
+
+	}
 }
 
 
