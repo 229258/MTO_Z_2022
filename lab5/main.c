@@ -27,6 +27,33 @@ int my_printf(char *format_string, char *param){
 						case '9':
 							param[j] = '8';
 							break;
+						case '8':
+							param[j] = '7';
+							break;
+						case '7':
+							param[j] = '6';
+							break;
+						case '6':
+							param[j] = '5';
+							break;
+						case '5':
+							param[j] = '4';
+							break;
+						case '4':
+							param[j] = '3';
+							break;
+						case '3':
+							param[j] = '2';
+							break;
+						case '2':
+							param[j] = '1';
+							break;
+						case '1':
+							param[j] = '0';
+							break;
+						case '0':
+							param[j] = '9';
+							break;
 
 
 					}
