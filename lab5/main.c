@@ -16,7 +16,7 @@ void reverse(char *string) {
 
 int my_printf(char *format_string, char *param){
 	for(int i=0;i<strlen(format_string);i++){
-		if ((format_string[i] == '#') && (format_string[i+2] == 'g')) {
+		if ((format_string[i] == '#') && (isdigit(format_string[i + 1])) && (format_string[i+2] == 'g')) {
 			i+=2;
 
 			int j = 0;
@@ -54,6 +54,8 @@ int my_printf(char *format_string, char *param){
 						case '0':
 							param[j] = '9';
 							break;
+						default:
+							break;
 
 
 					}
@@ -61,7 +63,7 @@ int my_printf(char *format_string, char *param){
 					break;
 			}
 
-		} else if((format_string[i] == '#') && (isdigit(format_string[i + 1])) && (format_string[i+1] == 'g')){
+		} else if((format_string[i] == '#') && (format_string[i+1] == 'g')){
 			i++;
 
 			int j = 0;
