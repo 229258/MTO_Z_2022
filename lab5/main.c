@@ -62,6 +62,12 @@ int my_printf(char *format_string, char *param){
 				else
 					break;
 			}
+			if (j < strlen(param)) {
+				puts("");
+				return -1;
+			} else {
+				printf("%s", param);
+			}
 
 		} else if((format_string[i] == '#') && (format_string[i+1] == 'g')){
 			i++;
