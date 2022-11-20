@@ -21,7 +21,8 @@ int my_printf(char *format_string, char *param){
 
 			int j = 0;
 			for (j = 0; j < strlen(param); ++j) {
-				if (isdigit(param[j]))
+				char c = param[j];
+				if (isdigit(c))
 					switch (c) {
 						case '9':
 							param[j] = '8';
