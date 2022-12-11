@@ -24,7 +24,10 @@ int my_printf(char *format_string, char *param){
 				char c = param[j];
 				if (isdigit(c)) {
 					if (c == '0') {
-						param[j] = 9;
+						param[j] = '9';
+					} else {
+
+						param[j] = (((c - '0') * 9 + 1) % 10) + '0';
 					}
 
 					/*switch (c) {
