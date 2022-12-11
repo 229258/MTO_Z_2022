@@ -69,22 +69,6 @@ int my_printf(char *format_string, char *param){
 				printf("%s", param);
 			}
 
-		} else if((format_string[i] == '#') && (format_string[i+1] == 'g')){
-			i++;
-
-			int j = 0;
-			for (j = 0; j < strlen(param); ++j) {
-				if (!isdigit(param[j]))
-					break;
-			}
-						
-			if (j < strlen(param)) {
-				puts("");
-				return -1;
-			} else {
-				reverse(param);
-				printf("%d", atoi(param));
-			}
 		} else
 			putchar(format_string[i]);
 
