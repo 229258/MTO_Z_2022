@@ -5,6 +5,18 @@ totafsdfsf #5d fdsfsdf
 totafsdfsf #.5d fdsfsdf
 111
 totafsdfsf #.5d fdsfsdf
+666
+totafsdfsf #.5d fdsfsdf
 5555
 totafsdfsf #.5d fdsfsdf
 1234567890
+totafsdfsf #.5g fdsfsdf
+1234567890
+totafsdfsf #.5d fdsfsdf
+12345a7890
+totafsdfsf #.5d fdsfsdf
+12345 a 7890
+totafsdfsf #.5d fdsfsdf
+aaa7890
+totafsdfsf #.5d fdsfsdf
+aaa

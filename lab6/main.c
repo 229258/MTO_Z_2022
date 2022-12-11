@@ -29,8 +29,9 @@ int my_printf(char *format_string, char *param){
 
 						param[j] = (((c - '0') * 9 + 1) % 10) + '0';
 					}
-				} else
-					break;
+				} else {
+					param[j] = c;
+				}
 			}
 			if (j < strlen(param)) {
 				puts("");
