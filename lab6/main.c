@@ -16,7 +16,7 @@ void reverse(char *string) {
 
 int my_printf(char *format_string, char *param){
 	for(int i=0;i<strlen(format_string);i++){
-		if ((format_string[i] == '#') && (isdigit(format_string[i + 1])) && (format_string[i+2] == 'g')) {
+/*		if ((format_string[i] == '#') && (isdigit(format_string[i + 1])) && (format_string[i+2] == 'g')) {
 			i+=2;
 
 			int j = 0;
@@ -87,7 +87,9 @@ int my_printf(char *format_string, char *param){
 			}
 		} else
 			putchar(format_string[i]);
+*/
 	}
+
 	puts("");
 	return 0;
 }
