@@ -14,6 +14,14 @@ void reverse(char *string) {
 	}
 }
 
+void dec_to_hex(char *str) {
+	int len = strlen(str);
+	for (int i = 0; i < len; i++) {
+
+
+	}
+}
+
 int my_printf(char *format_string, char *param){
 	for(int i=0;i<strlen(format_string);i++){
 		if ((format_string[i] == '#') && (format_string[i+1] == 'j')) {
@@ -28,10 +36,9 @@ int my_printf(char *format_string, char *param){
 			}
 
 			if (isNumberInParam) {
-
+				dec_to_hex(param);
 
 			} else {
-
 				puts("");
 				return 0;
 			}
