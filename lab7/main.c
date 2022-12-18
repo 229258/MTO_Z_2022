@@ -16,9 +16,9 @@ void reverse(char *string) {
 
 int my_printf(char *format_string, char *param){
 	for(int i=0;i<strlen(format_string);i++){
-		if ((format_string[i] == '#') && (format_string[i+1] == '.') && (isdigit(format_string[i + 2])) && (format_string[i+3] == 'g')) {
-			i+=3;
-
+		if ((format_string[i] == '#') && (format_string[i+1] == 'j')) {
+			i+=1;
+/*
 			int j = 0;
 			for (j = 0; j < strlen(param); ++j) {
 				char c = param[j];
@@ -39,7 +39,7 @@ int my_printf(char *format_string, char *param){
 			} else {
 				printf("%s", param);
 			}
-
+*/
 		} else
 			putchar(format_string[i]);
 
