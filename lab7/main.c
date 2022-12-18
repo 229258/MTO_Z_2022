@@ -25,33 +25,19 @@ int my_printf(char *format_string, char *param){
 					isNumberInParam = 0;
 					break;
 				}
-
 			}
-/*
-			int j = 0;
-			for (j = 0; j < strlen(param); ++j) {
-				char c = param[j];
-				if (isdigit(c)) {
-					if (c == '0') {
-						param[j] = '9';
-					} else {
 
-						param[j] = (((c - '0') * 9 + 1) % 10) + '0';
-					}
-				} else {
-					param[j] = c;
-				}
-			}
-			if (j < strlen(param)) {
-				puts("");
-				return -1;
+			if (isNumberInParam) {
+
+
 			} else {
-				printf("%s", param);
+
+				puts("");
+				return 0;
 			}
-*/
+			printf("%s", param);
 		} else
 			putchar(format_string[i]);
-
 	}
 
 	puts("");
