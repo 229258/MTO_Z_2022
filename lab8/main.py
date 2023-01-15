@@ -2,12 +2,12 @@
 
 import sys
 
-def convert_hex(string):
+def convert_hex(my_string):
     convert = ''
-        for char in string:
-            if 'a' <= char <= 'f':
-                char = chr(ord(char+6))
-            convert += char
+    for char in my_string:
+        if 'a' <= char <= 'f':
+            char = chr(ord(char+6))
+        convert += char
     return convert
 
 
