@@ -2,14 +2,14 @@
 
 import sys
 
-def convertHex(string):
+def convert_hex(string):
     convert = ''
         for char in string:
             if 'a' <= char <= 'f':
                 char = chr(ord(char+6))
             convert += char
     return convert
-	
+
 
 def my_printf(format_string,param):
     #print(format_string)
@@ -17,7 +17,8 @@ def my_printf(format_string,param):
     for idx in range(0,len(format_string)):
         if shouldDo:
             if format_string[idx] == '#' and format_string[idx+1] == '.'  and format_string[idx+2] == 'Z'  and format_string[idx+3] == 'j' and param.isnumeric():
-                print(param,end="")
+                hex_value = f"{int(param):x}"
+                print(convert_hex(hex_value),end="")
                 shouldDo=False
             else:
                 print(format_string[idx],end="")
