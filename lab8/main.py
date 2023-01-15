@@ -2,6 +2,14 @@
 
 import sys
 
+def convertHex(string):
+    convert = ''
+        for char in string:
+            if 'a' <= char <= 'f':
+                char = chr(ord(char+6))
+            convert += char
+    return convert
+	
 
 def my_printf(format_string,param):
     #print(format_string)
